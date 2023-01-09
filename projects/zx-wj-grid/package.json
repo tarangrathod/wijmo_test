@@ -1,0 +1,31 @@
+{
+  "name": "@zx/zx-wj-grid",
+  "version": "1.2.4",
+  "peerDependencies": {
+    "@angular/common": "^12.2.9",
+    "@angular/core": "^12.2.9",
+    "file-saver": "^2.0.5"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0",
+    "file-saver": "^2.0.5"
+  },
+  "description": "This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.",
+  "main": "karma.conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zignex/zx-wj-grid.git"
+  },
+  "author": "Tarang Rathod, Rohan Mittal, Shubham Chhapre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zignex/zx-wj-grid/issues"
+  },
+  "homepage": "https://github.com/zignex/zx-wj-grid#readme",
+  "publishConfig": {
+    "registry": "https://npm.zignexlogistics.com/"
+  }
+}

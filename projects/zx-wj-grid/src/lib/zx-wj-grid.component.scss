@@ -1,0 +1,67 @@
+.flexgrid-matchedCss {
+  background-color: yellow;
+}
+
+button {
+  outline: none;
+}
+
+.wijmoTable {
+  width: 100%;
+}
+
+.searchBar {
+  width: 180px;
+
+  .wj-control .wj-template .wj-control .wj-input {
+    height: 24px !important;
+  }
+}
+
+/* change the color of the filter glyphs */
+.wj-glyph-filter {
+  color: red !important;
+  font-size: 125% !important;
+}
+
+.custom-colors {
+  .wj-flexgrid .wj-cell.wj-filter-on .wj-elem-filter {
+    opacity: 0.7;
+    color: green !important;
+    font-size: 125% !important;
+  }
+}
+
+.zx-img2 {
+  background-position: center;
+  background-size: 100%, 100%;
+  background-repeat: no-repeat;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  vertical-align: middle;
+  position: relative;
+}
+
+.wj-flexgrid {
+  .wj-cell {
+    .wj-filter-on {
+      .wj-elem-filter {
+        opacity: 0.7 !important;
+        color: green !important;
+        font-size: 125% !important;
+      }
+    }
+  }
+}
+
+.iconMaxDimension {
+  max-height: 26px;
+  max-width: 26px;
+}
+.iconMainDiv {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+}

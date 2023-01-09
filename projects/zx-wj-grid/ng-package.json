@@ -1,0 +1,20 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/zx-wj-grid",
+  "lib": {
+    "entryFile": "src/index.ts",
+    "umdModuleIds": {
+      "@grapecity/wijmo.grid": "@grapecity/wijmo.grid",
+      "@grapecity/wijmo.grid.xlsx": "@grapecity/wijmo.grid.xlsx",
+      "file-saver": "file-saver",
+      "@grapecity/wijmo": "@grapecity/wijmo",
+      "@grapecity/wijmo.grid.filter": "@grapecity/wijmo.grid.filter",
+      "@grapecity/wijmo.grid.search": "@grapecity/wijmo.grid.search",
+      "@grapecity/wijmo.grid.selector": "@grapecity/wijmo.grid.selector",
+      "lodash": "lodash"
+    }
+  },
+  "allowedNonPeerDependencies": [
+    "."
+  ]
+}

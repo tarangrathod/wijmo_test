@@ -1,0 +1,64 @@
+<div #optionsPanel class="flex justify-between w-full">
+  <div>
+    <div *ngIf="searchIdInput" #searchBar class="wijmo-search inline-block mr-1 mb-1 searchBar" (change)="getCount()">
+    </div>
+    <div *ngIf="searchIdInput" class="content-center inline-block mr-1 mb-1" style="color: #222222; font-size: 12px">
+      Record Count: <span #recordCount class="ml-0"></span>
+    </div>
+  </div>
+  <div class="content-center ml-auto flex mr-1 flex-wrap">
+    <!-- <div *ngIf="filterOnMapIdInput" class="content-center inline-block mr-1 mb-1"
+      style="color: #222222; font-size: 12px;">
+      <button type="button" class="tooltip" *ngIf="!filterOnMapEnabled" (click)="filterOnMapFun()">
+        <i class="zx-3x zx-icon zx-img3 zx-disable-map-filter"
+          style="max-height: 26px; max-width: 26px; vertical-align: middle;"></i>
+        <span class="tooltiptext tooltip-right-0x tooltip-top-3x">Enable Filter on Map</span>
+      </button>
+      <button type="button" class="tooltip" *ngIf="filterOnMapEnabled" (click)="filterOnMapFun()">
+        <i class="zx-3x zx-icon zx-img3 zx-enable-map-filter"
+          style="max-height: 26px; max-width: 26px; vertical-align: middle;"></i>
+        <span class="tooltiptext tooltip-right-0x tooltip-top-3x">Disable Filter on Map</span>
+      </button>
+    </div> -->
+    <div *ngIf="createChkBx.length" class="flex">
+      <div class="pr-2" *ngFor="let item of createChkBx">
+        <input type="checkbox" [id]="item.id" [checked]="item.isChecked" [name]="item.name"
+          (change)="checkChangeEvent($event)" />
+        <label class="text-xs" [attr.for]="item.id">{{ item.name }}</label>
+      </div>
+    </div>
+
+    <div class="iconMainDiv" *ngIf="showGrid1Buttons">
+      <ng-container *ngFor="let btn of gridBtnList">
+        <ng-container
+          *ngIf="filterOnMapIdInput && (btn.name == 'Enable filter on map' || btn.name == 'Disable filter on map')">
+          <button *ngIf="btn.name == 'Disable filter on map'"
+            [ngStyle]="{'display': (filterOnMapEnabled == false) ? 'none':'inline-block'}" type="button" class="tooltip"
+            (click)="eventClick(btn.name)">
+            <i class="iconMaxDimension" [class]="btn.className"></i>
+            <span [class]="btn.toolTipClass">{{ btn.toolTipText }}</span>
+          </button>
+          <button *ngIf="btn.name == 'Enable filter on map'"
+            [ngStyle]="{'display': (filterOnMapEnabled == true) ? 'none':'inline-block'}" type="button" class="tooltip"
+            (click)="eventClick(btn.name)">
+            <i class="iconMaxDimension" [class]="btn.className"></i>
+            <span [class]="btn.toolTipClass">{{ btn.toolTipText }}</span>
+          </button>
+        </ng-container>
+        <ng-container *ngIf="btn.name != 'Enable filter on map' && btn.name != 'Disable filter on map'">
+          <button type="button" class="tooltip" (click)="eventClick(btn.name)">
+            <i [class]="btn.className" class="iconMaxDimension"></i>
+            <span [class]="btn.toolTipClass">{{ btn.toolTipText }}</span>
+          </button>
+        </ng-container>
+      </ng-container>
+    </div>
+    <!-- <div *ngIf="filterColumns!=undefined && filterColumns.length!=0">
+      <button type="button" class="tooltip" (click)="clearAllFilter()">
+        <i class="zx-3x zx-icon zx-img3 zx-filter-remove" style="max-height: 26px; max-width: 26px;"></i>
+        <span class="tooltiptext tooltip-right-0x tooltip-top-3x">Clear Column Filter(s)/Sorting</span>
+      </button>
+    </div> -->
+  </div>
+</div>
+<div #dataTable class="wijmoTable"></div>
